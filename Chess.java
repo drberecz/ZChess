@@ -163,15 +163,7 @@ public class Chess {
   
   private static boolean checkRookRule(int vectorY,int vectorX,int y1, int x1, int y2, int x2) {
   
-      if ( vectorY!=0 & vectorX!=0 ){
-          return false;
-      }
-      if (Math.abs(vectorY)==1 | Math.abs(vectorX)==1) return true;
-      
-      int signY = (vectorY==0) ? 0 : vectorY/Math.abs(vectorY);
-      int signX = (vectorX==0) ? 0 : vectorX/Math.abs(vectorX);
-           
-      return isRouteFree ( y1, x1, y2, x2, signY, signX);
+return true;
   }
 
   
@@ -182,18 +174,10 @@ public class Chess {
   
 
     static boolean checkKnightRule(int vectorY,int vectorX){
-        int[][] predefVectors = {
-            { -1,-2 }, { -2,-1 }, { -2,1 },{ -1,2 },
-            { 1,-2 }, { 2,-1 }, { 2,1 }, { 1,2 } 
-        };
-        
-        for ( int i=0; i<predefVectors.length; i++) {
-            if ( vectorY==predefVectors[i][0] && vectorX==predefVectors[i][1] ){
-                return true;
-            }
-        }
+ 
 
-    return false;
+
+    return true;
     }
   
   
